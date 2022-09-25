@@ -6,7 +6,6 @@ export interface Technology {
 export interface Project {
 	title: string;
 	description: string;
-	imagePath: string;
 	technologies: Technology[];
 	githubLink: string;
 	liveLink: string;
@@ -15,8 +14,7 @@ export interface Project {
 const projects: Project[] = [
 	{
 		title: "worktime",
-		description: "Responsive worktime tracker",
-		imagePath: "/worktime.png",
+		description: "A work time tracker built using all modules of the T3 Stack",
 		technologies: [
 			{ name: "TypeScript", type: "language" },
 			{ name: "Next.js", type: "framework" },

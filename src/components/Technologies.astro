@@ -2,6 +2,7 @@
 import { languages, frameworks, tools } from "../data/technologies";
 import FrameworkBadge from "./FrameworkBadge.astro";
 import LanguageBadge from "./LanguageBadge.astro";
+import TechnologyBadge from "./TechnologyBadge.astro";
 import ToolBadge from "./ToolBadge.astro";
 ---
 
@@ -10,7 +11,9 @@ import ToolBadge from "./ToolBadge.astro";
 		<h3 class="text-md">Languages</h3>
 		{
 			languages.map((language) => {
-				return <LanguageBadge text={language} />;
+				return (
+					<TechnologyBadge technology={{ type: "language", name: language }} />
+				);
 			})
 		}
 	</div>
@@ -18,7 +21,11 @@ import ToolBadge from "./ToolBadge.astro";
 		<h3 class="text-md">Frameworks</h3>
 		{
 			frameworks.map((framework) => {
-				return <FrameworkBadge text={framework} />;
+				return (
+					<TechnologyBadge
+						technology={{ type: "framework", name: framework }}
+					/>
+				);
 			})
 		}
 	</div>
@@ -26,7 +33,7 @@ import ToolBadge from "./ToolBadge.astro";
 		<h3 class="text-md">Tools & Platforms</h3>
 		{
 			tools.map((tool) => {
-				return <ToolBadge text={tool} />;
+				return <TechnologyBadge technology={{ type: "tool", name: tool }} />;
 			})
 		}
 	</div>

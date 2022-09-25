@@ -6,12 +6,30 @@ import ToolBadge from "./ToolBadge.astro";
 
 export interface Props {
 	technology: Technology;
+	size?: string;
 }
 
-const { technology } = Astro.props;
-console.log("technology", technology);
+const { technology, size } = Astro.props;
+
+const backgroundClass =
+	technology.type === "language"
+		? "bg-blue-200"
+		: technology.type === "framework"
+		? "bg-purple-200"
+		: "bg-red-200";
+
+const textClass =
+	technology.type === "language"
+		? "text-blue-800"
+		: technology.type === "framework"
+		? "text-purple-900"
+		: "text-red-900";
+
+const sizeClass = size ?? "text-sm";
 ---
 
-{technology.type === "language" && <LanguageBadge text={technology.name} />}
-{technology.type === "framework" && <FrameworkBadge text={technology.name} />}
-{technology.type === "tool" && <ToolBadge text={technology.name} />}
+<span
+	class={`${sizeClass} font-semibold mr-2 px-2.5 py-0.5 rounded ${backgroundClass} ${textClass}`}
+>
+	{technology.name}
+</span>
