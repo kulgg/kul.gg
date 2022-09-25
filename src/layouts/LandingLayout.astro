@@ -16,7 +16,7 @@ import Header from "../layouts/Header.astro";
 		<div id="landing-screen" class="bg-gray-900">
 			<div class="min-h-screen flex flex-col justify-between container">
 				<Header />
-				<div class="">
+				<div>
 					<h1
 						class="pb-2 text-5xl font-bold text-center text-transparent bold-text bg-clip-text bg-gradient-to-r from-pink-200 via-purple-200 to-orange-200 animate-gradient-text"
 					>
@@ -40,13 +40,18 @@ import Header from "../layouts/Header.astro";
 				</div>
 			</div>
 		</div>
+		<main class="container">
+			<slot />
+		</main>
 		<script
 			src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
 			is:inline
+			defer
 		></script>
 		<script
 			src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"
 			is:inline
+			defer
 		></script>
 		<script>
 			addEventListener("DOMContentLoaded", (event) => {
@@ -67,8 +72,5 @@ import Header from "../layouts/Header.astro";
 				});
 			});
 		</script>
-		<main class="container">
-			<slot />
-		</main>
 	</body>
 </html>
