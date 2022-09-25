@@ -4,9 +4,11 @@ const frameworks: string[] = [
 	"Next.js",
 	"Tailwind CSS",
 	".NET 6",
-	"Entity Framework Core",
+	"EF Core",
 	"Astro",
 	"Prisma",
+	"NextAuth.js",
+	"tRPC",
 ];
 const tools: string[] = ["Docker", "git", "GitHub", "Azure DevOps", "Vercel"];
 
