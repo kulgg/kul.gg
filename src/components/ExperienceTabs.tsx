@@ -2,11 +2,7 @@ import { useState } from "react";
 
 const tabs: string[] = ["Education", "Technologies"];
 
-const ExperienceTabs = ({
-	children,
-}: {
-	children: JSX.Element;
-}): JSX.Element => {
+const ExperienceTabs = (): JSX.Element => {
 	const [activeTab, setActiveTab] = useState("Education");
 
 	return (
