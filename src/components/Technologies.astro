@@ -1,0 +1,33 @@
+---
+import { languages, frameworks, tools } from "../data/technologies";
+import FrameworkBadge from "./FrameworkBadge.astro";
+import LanguageBadge from "./LanguageBadge.astro";
+import ToolBadge from "./ToolBadge.astro";
+---
+
+<div class="flex flex-col justify-start gap-3">
+	<div>
+		<h3 class="text-md">Languages</h3>
+		{
+			languages.map((language) => {
+				return <LanguageBadge text={language} />;
+			})
+		}
+	</div>
+	<div>
+		<h3 class="text-md">Frameworks</h3>
+		{
+			frameworks.map((framework) => {
+				return <FrameworkBadge text={framework} />;
+			})
+		}
+	</div>
+	<div>
+		<h3 class="text-md">Tools & Platforms</h3>
+		{
+			tools.map((tool) => {
+				return <ToolBadge text={tool} />;
+			})
+		}
+	</div>
+</div>

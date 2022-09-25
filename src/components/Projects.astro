@@ -1,0 +1,22 @@
+---
+import { projects } from "../data/projects";
+import TechnologyBadge from "./TechnologyBadge.astro";
+---
+
+<div class="grid grid-cols-2">
+	{
+		projects.map((project) => {
+			return (
+				<div>
+					<div class="text-lg font-semibold">{project.title}</div>
+					<p>{project.description}</p>
+					<div>
+						{project.technologies.map((technology) => {
+							return <TechnologyBadge technology={technology} />;
+						})}
+					</div>
+				</div>
+			);
+		})
+	}
+</div>

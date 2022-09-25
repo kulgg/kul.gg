@@ -1,53 +1,18 @@
 ---
 import LandingLayout from "../layouts/LandingLayout.astro";
-import { languages, frameworks, tools } from "../data/technologies";
+import Technologies from "../components/Technologies.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <LandingLayout>
 	<div class="px-2">
-		<div class="my-8"></div>
-		<h2 class="text-2xl font-semibold">Technologies I Use</h2>
-		<div class="flex flex-col justify-start gap-3">
-			<div>
-				<h3 class="text-md">Languages</h3>
-				{
-					languages.map((language) => {
-						return (
-							<span class="text-sm font-semibold mr-2 px-2.5 py-0.5 rounded bg-blue-200 text-blue-800">
-								{language}
-							</span>
-						);
-					})
-				}
-			</div>
-			<div>
-				<h3 class="text-md">Frameworks</h3>
-				{
-					frameworks.map((framework) => {
-						return (
-							<span class="text-sm font-semibold mr-2 px-2.5 py-0.5 rounded bg-purple-200 text-purple-900">
-								{framework}
-							</span>
-						);
-					})
-				}
-			</div>
-			<div>
-				<h3 class="text-md">Tools & Platforms</h3>
-				{
-					tools.map((tool) => {
-						return (
-							<span class="text-sm font-semibold mr-2 px-2.5 py-0.5 rounded bg-red-200 text-red-900">
-								{tool}
-							</span>
-						);
-					})
-				}
-			</div>
-		</div>
+		<div class="my-24"></div>
+		<h2 class="text-2xl font-semibold my-4">Technologies</h2>
+		<Technologies />
 		<hr class="my-8 h-px border-0 bg-gray-700" />
 		<div>
 			<h2 class="text-2xl font-semibold">Projects</h2>
+			<Projects />
 		</div>
 		<hr class="my-8 h-px border-0 bg-gray-700" />
 		<div>

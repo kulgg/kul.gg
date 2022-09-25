@@ -1,0 +1,17 @@
+---
+import type { Technology } from "../data/projects";
+import FrameworkBadge from "./FrameworkBadge.astro";
+import LanguageBadge from "./LanguageBadge.astro";
+import ToolBadge from "./ToolBadge.astro";
+
+export interface Props {
+	technology: Technology;
+}
+
+const { technology } = Astro.props;
+console.log("technology", technology);
+---
+
+{technology.type === "language" && <LanguageBadge text={technology.name} />}
+{technology.type === "framework" && <FrameworkBadge text={technology.name} />}
+{technology.type === "tool" && <ToolBadge text={technology.name} />}
