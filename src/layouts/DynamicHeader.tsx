@@ -1,8 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
-const DynamicHeader = (): JSX.Element => {
+export default function DynamicHeader(): JSX.Element {
 	const [headerIsVisible, setHeaderIsVisible] = useState(false);
-
 	useEffect(() => {
 		const adjustVisibility = () => {
 			setHeaderIsVisible(window.pageYOffset > screen.height / 2 - 50);
@@ -38,6 +37,4 @@ const DynamicHeader = (): JSX.Element => {
 			</div>
 		</header>
 	);
-};
-
-export default DynamicHeader;
+}

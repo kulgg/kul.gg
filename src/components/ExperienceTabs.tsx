@@ -2,7 +2,7 @@ import { useState } from "react";
 
 const tabs: string[] = ["Education", "Technologies"];
 
-const ExperienceTabs = (): JSX.Element => {
+export default function ExperienceTabs(): JSX.Element {
 	const [activeTab, setActiveTab] = useState("Education");
 
 	return (
@@ -11,7 +11,7 @@ const ExperienceTabs = (): JSX.Element => {
 				<ul className="flex flex-wrap -mb-px">
 					{tabs.map((tab) => {
 						return tab === activeTab ? (
-							<li className="mr-2">
+							<li className="mr-2" key={tab}>
 								<a
 									className="cursor-pointer inline-block p-4 rounded-t-lg border-b-2 active text-blue-400 border-blue-400"
 									aria-current="page"
@@ -20,7 +20,7 @@ const ExperienceTabs = (): JSX.Element => {
 								</a>
 							</li>
 						) : (
-							<li className="mr-2" onClick={() => setActiveTab(tab)}>
+							<li className="mr-2" onClick={() => setActiveTab(tab)} key={tab}>
 								<a className="cursor-pointer inline-block p-4 rounded-t-lg border-b-2 border-transparent hover:border-gray-300 hover:text-gray-300">
 									{tab}
 								</a>
@@ -32,6 +32,4 @@ const ExperienceTabs = (): JSX.Element => {
 			{activeTab === "Education" && <div>Education</div>}
 		</div>
 	);
-};
-
-export default ExperienceTabs;
+}
