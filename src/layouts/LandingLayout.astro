@@ -1,5 +1,5 @@
 ---
-import Header from "../layouts/Header";
+import DynamicHeader from "./DynamicHeader";
 ---
 
 <!DOCTYPE html>
@@ -13,7 +13,7 @@ import Header from "../layouts/Header";
 		<title>kul.gg</title>
 	</head>
 	<body class="bg-gray-800 text-gray-100">
-		<Header client:load />
+		<DynamicHeader client:load />
 		<div id="landing-screen" class="bg-gray-900">
 			<div class="min-h-screen flex flex-col justify-between container">
 				<div></div>

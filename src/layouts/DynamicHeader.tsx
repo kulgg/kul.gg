@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 
-const Header = (): JSX.Element => {
+const DynamicHeader = (): JSX.Element => {
 	const [headerIsVisible, setHeaderIsVisible] = useState(false);
 
 	useEffect(() => {
@@ -40,4 +40,4 @@ const Header = (): JSX.Element => {
 	);
 };
 
-export default Header;
+export default DynamicHeader;
