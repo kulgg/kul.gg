@@ -6,23 +6,23 @@ import ExperienceTabs from "../components/ExperienceTabs";
 ---
 
 <LandingLayout>
-	<div class="px-2" id="about">
-		<div class="my-24"></div>
-		<h2 class="text-2xl font-semibold my-4">Technologies</h2>
-		<Technologies />
-		<hr class="my-8 h-px border-0 bg-gray-700" />
-		<div>
-			<h2 class="text-2xl font-semibold">Projects</h2>
-			<div class="my-4"></div>
-			<Projects />
-		</div>
-		<hr class="my-8 h-px border-0 bg-gray-700" />
-		<div>
-			<h2 class="text-2xl font-semibold">Experience</h2>
-			<ExperienceTabs client:load>
-				<Technologies />
-			</ExperienceTabs>
-		</div>
-	</div>
-	<div class="h-screen"></div>
+  <div class="px-2" id="about">
+    <div class="my-24"></div>
+    <h2 class="text-2xl font-semibold my-4">Technologies</h2>
+    <Technologies />
+    <hr class="my-8 h-px border-0 bg-gray-700" />
+    <div>
+      <h2 class="text-2xl font-semibold">Projects</h2>
+      <div class="my-4"></div>
+      <Projects />
+    </div>
+    <hr class="my-8 h-px border-0 bg-gray-700" />
+    <div>
+      <h2 class="text-2xl font-semibold">Experience</h2>
+      <ExperienceTabs client:load>
+        <Technologies />
+      </ExperienceTabs>
+    </div>
+  </div>
+  <div class="h-screen"></div>
 </LandingLayout>

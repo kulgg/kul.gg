@@ -2,31 +2,31 @@
 import type { Technology } from "../data/projects";
 
 export interface Props {
-	technology: Technology;
-	size?: string;
+  technology: Technology;
+  size?: string;
 }
 
 const { technology, size } = Astro.props;
 
 const backgroundClass =
-	technology.type === "language"
-		? "bg-blue-200"
-		: technology.type === "framework"
-		? "bg-purple-200"
-		: "bg-red-200";
+  technology.type === "language"
+    ? "bg-blue-200"
+    : technology.type === "framework"
+    ? "bg-purple-200"
+    : "bg-red-200";
 
 const textClass =
-	technology.type === "language"
-		? "text-blue-800"
-		: technology.type === "framework"
-		? "text-purple-900"
-		: "text-red-900";
+  technology.type === "language"
+    ? "text-blue-800"
+    : technology.type === "framework"
+    ? "text-purple-900"
+    : "text-red-900";
 
 const sizeClass = size ?? "text-sm";
 ---
 
 <span
-	class={`${sizeClass} font-semibold mr-2 px-2.5 py-0.5 rounded ${backgroundClass} ${textClass}`}
+  class={`${sizeClass} font-semibold mr-2 px-2.5 py-0.5 rounded ${backgroundClass} ${textClass}`}
 >
-	{technology.name}
+  {technology.name}
 </span>
