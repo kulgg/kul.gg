@@ -22,9 +22,23 @@ const projects: Project[] = [
       { name: "Prisma", type: "framework" },
       { name: "NextAuth.js", type: "framework" },
       { name: "tRPC", type: "framework" },
+      { name: "Vercel", type: "tool" },
     ],
     githubLink: "https://github.com/kulgg/worktime",
     liveLink: "https://worktime.kul.gg",
+  },
+  {
+    title: "kul.gg",
+    description: "My personal dev website",
+    technologies: [
+      { name: "TypeScript", type: "language" },
+      { name: "Astro", type: "framework" },
+      { name: "React", type: "framework" },
+      { name: "Tailwind CSS", type: "framework" },
+      { name: "Vercel", type: "tool" },
+    ],
+    githubLink: "https://github.com/kulgg/kul.gg",
+    liveLink: "https://kul.gg",
   },
 ];
 
