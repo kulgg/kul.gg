@@ -11,6 +11,8 @@ export interface Project {
   liveLink: string;
 }
 
+// ToDo: make technology type enum and refactor technologybadge component
+
 const projects: Project[] = [
   {
     title: "worktime",
