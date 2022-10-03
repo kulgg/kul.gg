@@ -21,17 +21,14 @@ function getDayName(date: Date): string {
 <LandingLayout>
   <div class="px-2" id="about">
     <div class="my-24"></div>
-    <h2 class="text-2xl font-semibold my-4">Technologies</h2>
-    <Technologies />
-    <hr class="my-8 h-px border-0 bg-gray-700" />
     <div>
       <h2 class="text-2xl font-semibold mb-4">Projects</h2>
       <Projects />
     </div>
     <hr class="my-8 h-px border-0 bg-gray-700" />
-    <div>
-      <h2 class="text-2xl font-semibold">Experience</h2>
-    </div>
+    <h2 class="text-2xl font-semibold my-4">Experience</h2>
+    <Technologies />
+    <hr class="my-8 h-px border-0 bg-gray-700" />
     <div class="mt-10 mb-8 text-center text-xl">
       Thanks for stopping by, have a good {getDayName(new Date())}!
     </div>
