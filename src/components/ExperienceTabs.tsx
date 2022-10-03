@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Technologies from "./Technologies";
 
 const tabs: string[] = ["Education", "Technologies"];
 
@@ -30,6 +31,7 @@ export default function ExperienceTabs(): JSX.Element {
         </ul>
       </div>
       {activeTab === "Education" && <div>Education</div>}
+      {activeTab === "Technologies" && <Technologies />}
     </div>
   );
 }
