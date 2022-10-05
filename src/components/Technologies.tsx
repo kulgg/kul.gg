@@ -3,7 +3,7 @@ import TechnologyBadge from "./TechnologyBadge";
 
 const Technologies = (): JSX.Element => {
   return (
-    <div className="flex flex-col justify-start gap-3 mx-2">
+    <div className="flex flex-col justify-start gap-3">
       <div>
         <h3 className="text-md">Languages</h3>
         {languages.map((language) => {

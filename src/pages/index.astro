@@ -19,3 +19,19 @@ import FarewellMessage from "../components/FarewellMessage";
     <FarewellMessage client:visible />
   </main>
 </Layout>
+<style is:global>
+  @tailwind components;
+
+  @layer components {
+    .blinking-cursor:after {
+      content: "|";
+      animation: blink 1s infinite step-start;
+    }
+
+    @keyframes blink {
+      50% {
+        opacity: 0;
+      }
+    }
+  }
+</style>
