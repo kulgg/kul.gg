@@ -7,7 +7,7 @@ export default function ExperienceTabs(): JSX.Element {
   const [activeTab, setActiveTab] = useState("Education");
 
   return (
-    <div>
+    <div className="h-64">
       <div className="text-sm font-medium text-center border-b text-gray-400 border-gray-700">
         <ul className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
@@ -30,6 +30,7 @@ export default function ExperienceTabs(): JSX.Element {
           })}
         </ul>
       </div>
+      <div className="my-3"></div>
       {activeTab === "Education" && <div>Education</div>}
       {activeTab === "Technologies" && <Technologies />}
     </div>

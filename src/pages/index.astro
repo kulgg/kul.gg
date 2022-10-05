@@ -1,8 +1,8 @@
 ---
-import LandingLayout from "../layouts/LandingLayout.astro";
+import Layout from "../layouts/Layout.astro";
 import Projects from "../components/Projects.astro";
 import ExperienceTabs from "../components/ExperienceTabs";
-import Technologies from "../components/Technologies";
+import LandingScreen from "../layouts/LandingScreen.astro";
 
 const days: string[] = [
   "Sunday",
@@ -19,17 +19,20 @@ function getDayName(date: Date): string {
 }
 ---
 
-<LandingLayout>
-  <div class="px-2" id="about">
-    <div class="my-24"></div>
-    <h2 class="text-2xl font-semibold mb-4">Projects</h2>
-    <Projects />
-    <hr class="my-8 h-px border-0 bg-gray-700" />
-    <h2 class="text-2xl font-semibold my-4">Experience</h2>
-    <ExperienceTabs client:load />
-    <hr class="my-8 h-px border-0 bg-gray-700" />
-    <div class="mt-10 mb-8 text-center text-xl">
-      Thanks for stopping by, have a good {getDayName(new Date())}!
+<Layout dynamicHeader={true}>
+  <LandingScreen />
+  <main class="container">
+    <div class="px-2" id="about">
+      <div class="my-24"></div>
+      <h2 class="text-2xl font-semibold mb-4">Projects</h2>
+      <Projects />
+      <hr class="my-8 h-px border-0 bg-gray-700" />
+      <h2 class="text-2xl font-semibold my-4">Experience</h2>
+      <ExperienceTabs client:load />
+      <hr class="my-8 h-px border-0 bg-gray-700" />
+      <div class="mt-10 mb-8 text-center text-xl">
+        Thanks for stopping by, have a good {getDayName(new Date())}!
+      </div>
     </div>
-  </div>
-</LandingLayout>
+  </main>
+</Layout>
