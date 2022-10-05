@@ -8,6 +8,7 @@ export default function DynamicHeader(): JSX.Element {
       setHeaderIsVisible(window.pageYOffset > screen.height / 2 - 50);
     };
 
+    adjustVisibility();
     addEventListener("scroll", adjustVisibility);
 
     return () => removeEventListener("scroll", adjustVisibility);
