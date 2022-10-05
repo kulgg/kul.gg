@@ -5,10 +5,10 @@ export interface TechnologyBadgeProps {
   size?: string;
 }
 
-const TechnologyBadge = ({
+export default function TechnologyBadge({
   technology,
   size,
-}: TechnologyBadgeProps): JSX.Element => {
+}: TechnologyBadgeProps): JSX.Element {
   const backgroundClass =
     technology.type === "language"
       ? "bg-blue-200"
@@ -32,6 +32,4 @@ const TechnologyBadge = ({
       {technology.name}
     </span>
   );
-};
-
-export default TechnologyBadge;
+}

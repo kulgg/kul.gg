@@ -14,7 +14,7 @@ function getDayName(date: Date): string {
   return days[date.getDay()];
 }
 
-const FarewellMessage = (): JSX.Element => {
+export default function FarewellMessage(): JSX.Element {
   const [message, setMessage] = useState("");
 
   useEffect(() => {
@@ -36,6 +36,4 @@ const FarewellMessage = (): JSX.Element => {
       {message}
     </div>
   );
-};
-
-export default FarewellMessage;
+}

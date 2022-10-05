@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import type { Project } from "../data/projects";
 import TechnologyBadge from "./TechnologyBadge";
 
-const ProjectEntry: React.FC<{ project: Project }> = ({ project }) => {
+export default function ProjectEntry({ project }: { project: Project }) {
   return (
     <div className="p-6 max-w-sm rounded-lg h-full border shadow-md bg-gray-700 border-gray-700 hover:border-gray-400 hover:scale-[1.02] transition duration-100 group">
       <div className="flex flex-row items-center justify-between">
@@ -33,11 +33,15 @@ const ProjectEntry: React.FC<{ project: Project }> = ({ project }) => {
       </p>
       <div className="visible md:invisible md:group-hover:visible">
         {project.technologies.map((technology) => {
-          return <TechnologyBadge technology={technology} size="text-xs" />;
+          return (
+            <TechnologyBadge
+              technology={technology}
+              size="text-xs"
+              key={technology.name}
+            />
+          );
         })}
       </div>
     </div>
   );
-};
-
-export default ProjectEntry;
+}

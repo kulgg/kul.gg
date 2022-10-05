@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 
-const FadeInContainer: React.FC<{ children: JSX.Element; delay: number }> = ({
+export default function FadeInContainer({
   children,
   delay,
-}) => {
+}: {
+  children: JSX.Element;
+  delay: number;
+}): JSX.Element {
   return (
     <motion.div
       viewport={{
@@ -25,6 +28,4 @@ const FadeInContainer: React.FC<{ children: JSX.Element; delay: number }> = ({
       {children}
     </motion.div>
   );
-};
-
-export default FadeInContainer;
+}
