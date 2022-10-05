@@ -1,15 +1,15 @@
-export interface Technology {
+export type Technology = {
   name: string;
   type: string;
-}
+};
 
-export interface Project {
+export type Project = {
   title: string;
   description: string;
   technologies: Technology[];
   githubLink: string;
   liveLink: string;
-}
+};
 
 // ToDo: make technology type enum and refactor technologybadge component
 
