@@ -18,7 +18,7 @@ const FadeInContainer: React.FC<{ children: JSX.Element; delay: number }> = ({
         translateY: 0,
       }}
       transition={{
-        duration: 0.5,
+        duration: 0.25,
         delay: delay,
       }}
     >
