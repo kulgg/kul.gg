@@ -14,7 +14,7 @@ export default function ExperienceTabs(): JSX.Element {
             return tab === activeTab ? (
               <li className="mr-2" key={tab}>
                 <a
-                  className="cursor-pointer inline-block p-4 rounded-t-lg border-b-2 active text-blue-400 border-blue-400"
+                  className="cursor-pointer inline-block p-4 rounded-t-lg border-b-2 active text-blue-500 border-blue-500"
                   aria-current="page"
                 >
                   {tab}
