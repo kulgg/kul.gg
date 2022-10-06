@@ -1,5 +1,5 @@
 import { useState } from "react";
-import FadeInContainer from "./FadeInContainer";
+import FadeUpContainer from "./FadeUpContainer";
 import Technologies from "./Technologies";
 
 const tabs: string[] = ["Education", "Technologies"];
@@ -33,14 +33,14 @@ export default function ExperienceTabs(): JSX.Element {
       </div>
       <div className="my-3"></div>
       {activeTab === "Education" && (
-        <FadeInContainer delay={0.1}>
+        <FadeUpContainer delay={0.1}>
           <div>Education</div>
-        </FadeInContainer>
+        </FadeUpContainer>
       )}
       {activeTab === "Technologies" && (
-        <FadeInContainer delay={0.1}>
+        <FadeUpContainer delay={0.1}>
           <Technologies />
-        </FadeInContainer>
+        </FadeUpContainer>
       )}
     </div>
   );

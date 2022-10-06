@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function FadeInContainer({
+export default function FadeUpContainer({
   children,
   delay,
 }: {

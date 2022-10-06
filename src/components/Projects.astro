@@ -1,6 +1,6 @@
 ---
 import { projects } from "../data/projects";
-import FadeInContainer from "./FadeInContainer";
+import FadeUpContainer from "./FadeUpContainer";
 import ProjectEntry from "./ProjectEntry";
 ---
 
@@ -8,9 +8,9 @@ import ProjectEntry from "./ProjectEntry";
   {
     projects.map((project, i) => {
       return (
-        <FadeInContainer delay={i * 0.07} client:load>
+        <FadeUpContainer delay={i * 0.07} client:load>
           <ProjectEntry project={project} />
-        </FadeInContainer>
+        </FadeUpContainer>
       );
     })
   }
