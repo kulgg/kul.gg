@@ -4,7 +4,7 @@ import Header from "./Header";
 
 export interface Props {
   title?: string;
-  dynamicHeader: boolean;
+  dynamicHeader?: boolean;
 }
 
 const { title, dynamicHeader } = Astro.props;
@@ -18,7 +18,7 @@ const { title, dynamicHeader } = Astro.props;
     <meta name="description" content="Personal developer site of kulgg" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>kul.gg</title>
+    <title>{title ?? "kul.gg"}</title>
   </head>
   <body class="bg-gray-800 text-gray-100">
     {dynamicHeader ? <DynamicHeader client:idle /> : <Header />}

@@ -10,7 +10,7 @@ export default function ExperienceTabs(): JSX.Element {
   const [activeTab, setActiveTab] = useState("Education");
 
   return (
-    <div className="h-128">
+    <div className="h-96">
       <div className="text-sm font-medium text-center border-b text-gray-400 border-gray-700">
         <ul className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
