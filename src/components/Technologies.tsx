@@ -3,9 +3,9 @@ import TechnologyBadge from "./TechnologyBadge";
 
 export default function Technologies(): JSX.Element {
   return (
-    <div className="flex flex-col justify-start gap-3 w-full">
+    <div className="flex flex-col justify-start gap-4 w-full">
       <div>
-        <h3 className="text-md">Languages</h3>
+        <h3 className="mb-1 text-md text-gray-200">Languages</h3>
         <div className="flex flex-wrap gap-2">
           {languages.map((language) => {
             return (
@@ -18,7 +18,7 @@ export default function Technologies(): JSX.Element {
         </div>
       </div>
       <div>
-        <h3 className="text-md">Frameworks</h3>
+        <h3 className="mb-1 text-md text-gray-200">Frameworks</h3>
         <div className="flex flex-wrap gap-2">
           {frameworks.map((framework) => {
             return (
@@ -31,7 +31,7 @@ export default function Technologies(): JSX.Element {
         </div>
       </div>
       <div>
-        <h3 className="text-md">Tools & Platforms</h3>
+        <h3 className="mb-1 text-md text-gray-200">Tools & Platforms</h3>
         <div className="flex flex-wrap gap-2">
           {tools.map((tool) => {
             return (
