@@ -10,14 +10,14 @@ export default function ExperienceTabs(): JSX.Element {
   const [activeTab, setActiveTab] = useState("Education");
 
   return (
-    <div className="h-64">
+    <div className="h-128">
       <div className="text-sm font-medium text-center border-b text-gray-400 border-gray-700">
         <ul className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
             return tab === activeTab ? (
               <li className="mr-2" key={tab}>
                 <a
-                  className="cursor-pointer inline-block p-4 rounded-t-lg border-b-2 active text-blue-500 border-blue-500"
+                  className="cursor-pointer inline-block p-4 rounded-t-lg border-b-2 active text-gray-300 border-blue-500"
                   aria-current="page"
                 >
                   {tab}
@@ -36,13 +36,13 @@ export default function ExperienceTabs(): JSX.Element {
       <div className="my-3"></div>
       {activeTab === "Education" && (
         <FadeRightContainer delay={0.05}>
-          <div>Education</div>
+          <div className="text-lg">Education</div>
         </FadeRightContainer>
       )}
       {activeTab === "Technologies" && (
-        <FadeLeftContainer delay={0.05}>
+        <FadeRightContainer delay={0.05}>
           <Technologies />
-        </FadeLeftContainer>
+        </FadeRightContainer>
       )}
     </div>
   );

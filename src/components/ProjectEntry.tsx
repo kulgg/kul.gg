@@ -31,14 +31,12 @@ export default function ProjectEntry({ project }: { project: Project }) {
       <p className="mb-3 font-normal text-gray-300 text-md">
         {project.description}
       </p>
-      <div className="visible md:invisible md:group-hover:visible">
+      <div className="visible md:invisible md:group-hover:visible flex flex-wrap gap-x-2">
         {project.technologies.map((technology) => {
           return (
-            <TechnologyBadge
-              technology={technology}
-              size="text-xs"
-              key={technology.name}
-            />
+            <div key={technology.name}>
+              <TechnologyBadge technology={technology} size="text-xs" />
+            </div>
           );
         })}
       </div>

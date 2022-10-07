@@ -23,7 +23,6 @@ export default function FadeRightContainer({
       transition={{
         duration: 0.25,
         delay: delay,
-        repeatType: "reverse",
       }}
     >
       {children}
