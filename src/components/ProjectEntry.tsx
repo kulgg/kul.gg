@@ -4,10 +4,10 @@ import TechnologyBadge from "./TechnologyBadge";
 
 export default function ProjectEntry({ project }: { project: Project }) {
   return (
-    <div className="p-6 max-w-sm rounded-lg h-full border shadow-md bg-gray-700 border-gray-700 hover:border-gray-400 hover:scale-[1.02] transition duration-100 group">
+    <div className="p-6 max-w-sm rounded-lg h-full border shadow-md bg-slate-800 border-gray-500 hover:border-gray-400 hover:scale-[1.05] transition duration-100 group">
       <div className="flex flex-row items-center justify-between">
         <a href={project.liveLink}>
-          <h5 className="mb-2 text-xl font-bold tracking-tight text-white hover:underline">
+          <h5 className="mb-2 text-lg font-bold tracking-tight text-white hover:underline">
             {project.title}
           </h5>
         </a>
