@@ -32,7 +32,7 @@ export default function FarewellMessage(): JSX.Element {
   }, []);
 
   return (
-    <div className="mt-10 mb-8 text-center text-xl blinking-cursor">
+    <div className="mt-10 mb-8 text-center text-md blinking-cursor">
       {message}
     </div>
   );

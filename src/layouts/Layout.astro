@@ -20,7 +20,7 @@ const { title, dynamicHeader } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title ?? "kul.gg"}</title>
   </head>
-  <body class="bg-gray-800 text-gray-100">
+  <body class="bg-slate-800 text-gray-100">
     {dynamicHeader ? <DynamicHeader client:idle /> : <Header />}
     <slot />
   </body>

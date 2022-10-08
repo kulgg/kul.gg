@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Education from "./Education";
 import FadeLeftContainer from "./FadeLeftContainer";
 import FadeRightContainer from "./FadeRightContainer";
 import FadeUpContainer from "./FadeUpContainer";
@@ -10,14 +11,14 @@ export default function ExperienceTabs(): JSX.Element {
   const [activeTab, setActiveTab] = useState("Education");
 
   return (
-    <div className="h-96">
-      <div className="text-sm font-medium text-center border-b text-gray-400 border-gray-700">
+    <div className="">
+      <div className="text-sm font-semibold text-center border-b text-gray-400 border-gray-700">
         <ul className="flex flex-wrap -mb-px">
           {tabs.map((tab) => {
             return tab === activeTab ? (
               <li className="mr-2" key={tab}>
                 <a
-                  className="cursor-pointer inline-block p-4 rounded-t-lg border-b-2 active text-gray-300 border-blue-500"
+                  className="cursor-pointer inline-block p-4 rounded-t-lg border-b-2 active text-blue-500 border-blue-500"
                   aria-current="page"
                 >
                   {tab}
@@ -36,7 +37,7 @@ export default function ExperienceTabs(): JSX.Element {
       <div className="my-3"></div>
       {activeTab === "Education" && (
         <FadeRightContainer delay={0.05}>
-          <div className="text-lg">Education</div>
+          <Education />
         </FadeRightContainer>
       )}
       {activeTab === "Technologies" && (

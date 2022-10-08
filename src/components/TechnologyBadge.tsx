@@ -17,7 +17,7 @@ export default function TechnologyBadge({
       : "border-red-400";
 
   const textClass = "text-neutral-300";
-  const sizeClass = size ?? "text-sm";
+  const sizeClass = size ?? "text-xs";
 
   return (
     <span
