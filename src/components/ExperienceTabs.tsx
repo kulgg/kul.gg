@@ -1,8 +1,6 @@
 import { useState } from "react";
 import Education from "./Education";
-import FadeLeftContainer from "./FadeLeftContainer";
-import FadeRightContainer from "./FadeRightContainer";
-import FadeUpContainer from "./FadeUpContainer";
+import FadeDownContainer from "./FadeDownContainer";
 import Technologies from "./Technologies";
 
 const tabs: string[] = ["Education", "Technologies"];
@@ -36,14 +34,14 @@ export default function ExperienceTabs(): JSX.Element {
       </div>
       <div className="my-3"></div>
       {activeTab === "Education" && (
-        <FadeRightContainer delay={0.05}>
+        <FadeDownContainer delay={0.05}>
           <Education />
-        </FadeRightContainer>
+        </FadeDownContainer>
       )}
       {activeTab === "Technologies" && (
-        <FadeRightContainer delay={0.05}>
+        <FadeDownContainer delay={0.05}>
           <Technologies />
-        </FadeRightContainer>
+        </FadeDownContainer>
       )}
     </div>
   );

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 
-export default function FadeRightContainer({
+export default function FadeDownContainer({
   children,
   delay,
 }: {
@@ -14,14 +14,14 @@ export default function FadeRightContainer({
       }}
       initial={{
         opacity: 0,
-        translateX: -55,
+        translateY: -35,
       }}
       whileInView={{
         opacity: 1,
-        translateX: 0,
+        translateY: 0,
       }}
       transition={{
-        duration: 0.25,
+        duration: 0.1,
         delay: delay,
       }}
     >
