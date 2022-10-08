@@ -52,7 +52,7 @@ export default function FarewellMessage(): JSX.Element {
 
     const stopBlinkingTimeout = setTimeout(() => {
       setIsCursorBlinking(false);
-    }, 125 * (msgChars.length + 10));
+    }, 125 * (msgChars.length + 8));
 
     return () => {
       timeouts.forEach((x) => clearTimeout(x));

@@ -4,6 +4,8 @@ import ExperienceTabs from "../components/ExperienceTabs";
 import LandingScreen from "../components/LandingScreen.astro";
 import FarewellMessage from "../components/FarewellMessage";
 import Projects from "../components/Projects.astro";
+import Education from "../components/Education";
+import Technologies from "../components/Technologies";
 ---
 
 <Layout dynamicHeader={true}>
@@ -13,8 +15,11 @@ import Projects from "../components/Projects.astro";
     <h2 class="text-2xl mb-6">Projects</h2>
     <Projects />
     <hr class="my-8 h-px border-0 bg-gray-700" />
-    <h2 class="text-2xl">Experience</h2>
-    <ExperienceTabs client:idle />
+    <h2 class="text-xl">Education</h2>
+    <Education client:idle />
+    <hr class="my-8 h-px border-0 bg-gray-700" />
+    <h2 class="text-xl">Technologies</h2>
+    <Technologies client:idle />
     <hr class="my-8 h-px border-0 bg-gray-700" />
     <FarewellMessage client:visible />
   </main>
