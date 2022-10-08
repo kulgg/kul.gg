@@ -1,4 +1,4 @@
-import type { Technology } from "../data/projects";
+import type { Technology } from "../../data/projects";
 
 export interface TechnologyBadgeProps {
   technology: Technology;

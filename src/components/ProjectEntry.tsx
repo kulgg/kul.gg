@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import type { Project } from "../data/projects";
+import type { Project } from "../../data/projects";
 import TechnologyBadge from "./TechnologyBadge";
 
 export default function ProjectEntry({ project }: { project: Project }) {
