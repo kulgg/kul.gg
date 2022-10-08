@@ -1,7 +1,17 @@
 ---
 import Layout from "../../layouts/Layout.astro";
+import type { Frontmatter } from "../../types/frontmatter";
+
+const posts = await Astro.glob<Frontmatter>("../../../data/blog/*.md");
 ---
 
 <Layout>
-  <main class="container px-2">Blog</main>
+  <main class="container px-2">
+    <h2 class="text-xl">Blog</h2>
+    {
+      posts.map((post) => {
+        return <div>{post.frontmatter.slug}</div>;
+      })
+    }
+  </main>
 </Layout>

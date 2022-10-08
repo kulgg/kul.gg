@@ -1,14 +1,23 @@
 ---
+import Layout from "../../layouts/Layout.astro";
+import type { Frontmatter } from "../../types/frontmatter";
+
 export async function getStaticPaths() {
-  return [
-    {
-      params: {
-        slug: "ab",
-      },
-      props: {},
+  const posts = await Astro.glob<Frontmatter>("../../../data/blog/*.md");
+
+  return posts.map((post) => ({
+    params: {
+      slug: post.frontmatter.slug,
     },
-  ];
+    props: { post },
+  }));
 }
+
+const { post } = Astro.props;
 ---
 
-abc
+<Layout>
+  <main class="container my-4">
+    {post.frontmatter.slug}
+  </main>
+</Layout>
