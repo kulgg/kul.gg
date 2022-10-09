@@ -2,7 +2,6 @@
 title: Markdown Test
 description: This is a test post to reveal the typography for all markdown components
 publishedAt: 09 Oct 2022
-imgUrl: https://images.unsplash.com/photo-1665085898206-8f9e65f1ff77?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80
 ---
 
 ## <a name="top"></a> Table of Contents

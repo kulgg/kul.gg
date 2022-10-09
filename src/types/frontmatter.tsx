@@ -1,6 +1,5 @@
-export interface Frontmatter {
+export type Frontmatter = {
   title: string;
   description: string;
   publishedAt: Date;
-  imgUrl: string;
-}
+};

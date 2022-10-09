@@ -20,7 +20,7 @@ const readingTime = getReadingTime(post.rawContent());
 ---
 
 <Layout>
-  <div class="container my-4">
+  <div class="container my-8">
     <h1 class="text-3xl font-semibold">{post.frontmatter.title}</h1>
     <div class="my-1"></div>
     <div class="text-gray-300 text-md flex flex-row gap-3 items-center">
@@ -103,6 +103,7 @@ const readingTime = getReadingTime(post.rawContent());
       </div>
     </div>
   </div>
+  <div class="my-16"></div>
   <article class="container prose prose-invert">
     <post.Content />
   </article>

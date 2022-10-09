@@ -1,4 +1,5 @@
 ---
+import PostCard from "../../components/blog/PostCard.astro";
 import Layout from "../../layouts/Layout.astro";
 import type { Frontmatter } from "../../types/frontmatter";
 import { getSlug } from "../../utils/blog";
@@ -7,12 +8,15 @@ const posts = await Astro.glob<Frontmatter>("../../../data/blog/*.md");
 ---
 
 <Layout>
-  <main class="container px-2 py-2">
-    <h2 class="text-2xl">Blog</h2>
-    {
-      posts.map((post) => {
-        return <div>{getSlug(post.file)}</div>;
-      })
-    }
+  <main class="container px-2 py-3">
+    <h1 class="text-3xl">Blog</h1>
+    <div class="my-6"></div>
+    <div class="flex flex-col gap-10">
+      {
+        posts.map((post) => {
+          return <PostCard post={post} />;
+        })
+      }
+    </div>
   </main>
 </Layout>
