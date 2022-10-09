@@ -1,4 +1,4 @@
-import { languages, frameworks, tools } from "../../data/technologies";
+import { frameworks, languages, tools } from "../../data/technologies";
 import FadeUpContainer from "./FadeUpContainer";
 import TechnologyBadge from "./TechnologyBadge";
 

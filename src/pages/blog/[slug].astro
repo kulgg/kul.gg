@@ -1,8 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import type { Frontmatter } from "../../types/frontmatter";
-import { getReadingTime } from "../../utils/blog";
-import { getSlug } from "../../utils/blog";
+import { getReadingTime, getSlug } from "../../utils/blog";
 
 export async function getStaticPaths() {
   const posts = await Astro.glob<Frontmatter>("../../../data/blog/*.md");
