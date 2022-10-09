@@ -1,3 +1,6 @@
 export interface Frontmatter {
-  slug: string;
+  title: string;
+  description: string;
+  publishedAt: Date;
+  imgUrl: string;
 }
