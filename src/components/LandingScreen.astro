@@ -4,21 +4,25 @@ import AnimatedDownArrow from "../components/AnimatedDownArrow";
 ---
 
 <div id="landing-screen" class="bg-slate-900">
-  <div class="min-h-screen flex flex-col justify-between container">
-    <div class="flex flex-row justify-center my-4 text-lg">
+  <div
+    class="min-h-screen flex flex-col justify-between container items-center"
+  >
+    <div class="my-4 text-lg">
       <a href="/blog" class="hover:underline">Blog</a>
     </div>
-    <div>
+    <div class="">
       <h1
         class="pb-2 text-5xl font-bold text-center text-transparent bold-text bg-clip-text bg-gradient-to-r from-pink-200 via-purple-200 to-orange-200 animate-gradient-text"
       >
-        kul<span class="text-blue-500">.</span>gg
+        kul<span class="text-blue-300">.</span>gg
       </h1>
-      <div class="text-center py-3 text-lg">Software Engineer</div>
+      <div class="text-center py-3 text-lg font-semibold">
+        Software Engineer
+      </div>
       <div class="flex justify-center">
         <a
           href="https://github.com/kulgg"
-          class="transition-colors duration-200 rounded-full hover:bg-gray-800 p-3"
+          class="transition-colors duration-200 rounded-full hover:bg-slate-700 p-3"
           aria-label="Github"
         >
           <VscGithub className="w-6 h-6" />
@@ -36,26 +40,21 @@ import AnimatedDownArrow from "../components/AnimatedDownArrow";
   defer
 ></script>
 <script
-  src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.birds.min.js"
+  src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"
   is:inline
   defer
 ></script>
 <script>
   addEventListener("DOMContentLoaded", (event) => {
-    VANTA.BIRDS({
+    VANTA.WAVES({
       el: "#landing-screen",
       mouseControls: true,
       touchControls: true,
       gyroControls: false,
       scale: 1.0,
       scaleMobile: 1.0,
-      birdSize: 1.0,
-      wingSpan: 40.0,
-      quantity: 1.0,
-      backgroundAlpha: 0.0,
-      speedLimit: 5.0,
-      color1: "#2563eb",
-      color2: "#0284c7",
+      color: "#0a1c48",
+      shininess: 6.0,
     });
   });
 </script>
