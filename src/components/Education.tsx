@@ -12,7 +12,8 @@ export default function Education() {
           </div>
           <div>
             <div className="col-span-1 text-sm flex gap-2 items-center text-gray-300">
-              <HiOutlineLocationMarker className="w-4 h-4" />G
+              <HiOutlineLocationMarker className="w-4 h-4" />
+              Germany
             </div>
             <div className="col-span-1 text-sm flex gap-2 items-center text-gray-300">
               <HiOutlineCalendar className="w-4 h-4" />
@@ -26,11 +27,12 @@ export default function Education() {
           </div>
           <div>
             <div className="col-span-1 text-sm flex gap-2 items-center text-gray-300">
-              <HiOutlineLocationMarker className="w-4 h-4" />G
+              <HiOutlineLocationMarker className="w-4 h-4" />
+              Germany
             </div>
             <div className="col-span-1 text-sm flex gap-2 items-center text-gray-300">
               <HiOutlineCalendar className="w-4 h-4" />
-              2017 - 2021
+              Graduated in 2021
             </div>
           </div>
         </div>

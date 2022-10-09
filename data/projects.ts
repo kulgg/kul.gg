@@ -31,7 +31,7 @@ const projects: Project[] = [
   },
   {
     title: "kul.gg",
-    description: "My personal dev website",
+    description: "My personal website",
     technologies: [
       { name: "TypeScript", type: "language" },
       { name: "Astro", type: "framework" },

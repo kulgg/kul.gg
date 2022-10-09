@@ -4,7 +4,7 @@ import TechnologyBadge from "./TechnologyBadge";
 
 export default function ProjectEntry({ project }: { project: Project }) {
   return (
-    <div className="p-6 max-w-sm rounded-lg h-48 sm:h-52 border shadow-md bg-gray-800 border-gray-500 hover:border-gray-300 hover:scale-[1.05] transition duration-100 group flex flex-col justify-between">
+    <div className="p-6 max-w-sm rounded-lg h-52 border shadow-md bg-gray-800 border-gray-500 hover:border-gray-300 hover:scale-[1.05] transition duration-100 group flex flex-col justify-between">
       <div>
         <div className="flex flex-row items-center justify-between">
           <h3 className="mb-2 text-lg font-semibold tracking-tight text-white hover:underline">
