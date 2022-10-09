@@ -7,13 +7,11 @@ export default function ProjectEntry({ project }: { project: Project }) {
     <div className="p-6 max-w-sm rounded-lg h-48 sm:h-52 border shadow-md bg-gray-800 border-gray-500 hover:border-gray-300 hover:scale-[1.05] transition duration-100 group flex flex-col justify-between">
       <div>
         <div className="flex flex-row items-center justify-between">
-          <a href={project.liveLink}>
-            <h5 className="mb-2 text-lg font-semibold tracking-tight text-white hover:underline">
-              {project.title}
-            </h5>
-          </a>
+          <h5 className="mb-2 text-lg font-semibold tracking-tight text-white hover:underline">
+            <a href={project.liveLink}>{project.title}</a>
+          </h5>
           <div className="flex items-center gap-1">
-            <a href={project.githubLink}>
+            <a href={project.githubLink} aria-label="Github">
               <svg
                 stroke="currentColor"
                 fill="none"

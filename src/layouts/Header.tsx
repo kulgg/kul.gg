@@ -6,6 +6,7 @@ const Header = (): JSX.Element => {
           <a
             href="/"
             className="pb-2 text-xl font-bold text-center text-transparent bold-text bg-clip-text bg-gradient-to-r from-pink-200 via-purple-200 to-orange-200 animate-gradient-text"
+            aria-label="kul.gg"
           >
             kul<span className="text-blue-500">.</span>gg
           </a>

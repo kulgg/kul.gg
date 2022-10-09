@@ -14,13 +14,13 @@ import Technologies from "../components/Technologies";
     <div class="my-24"></div>
     <h2 class="text-2xl mb-6">Projects</h2>
     <Projects />
-    <hr class="my-8 h-px border-0 bg-gray-700" />
-    <h2 class="text-xl">Education</h2>
-    <Education client:idle />
-    <hr class="my-8 h-px border-0 bg-gray-700" />
-    <h2 class="text-xl">Technologies</h2>
-    <Technologies client:idle />
-    <hr class="my-8 h-px border-0 bg-gray-700" />
+    <hr class="my-10 sm:my-16 h-px border-0 bg-gray-700" />
+    <h2 class="text-2xl">Education</h2>
+    <Education client:visible />
+    <hr class="my-10 sm:my-16 h-px border-0 bg-gray-700" />
+    <h2 class="text-2xl">Technologies</h2>
+    <Technologies client:visible />
+    <hr class="my-10 sm:my-16 h-px border-0 bg-gray-700" />
     <FarewellMessage client:visible />
   </main>
 </Layout>

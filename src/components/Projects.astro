@@ -8,7 +8,7 @@ import ProjectEntry from "./ProjectEntry";
   {
     projects.map((project, i) => {
       return (
-        <FadeUpContainer delay={i * 0.09} client:load>
+        <FadeUpContainer delay={i * 0.09} client:visible>
           <ProjectEntry project={project} />
         </FadeUpContainer>
       );

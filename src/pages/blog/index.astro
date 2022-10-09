@@ -6,8 +6,8 @@ const posts = await Astro.glob<Frontmatter>("../../../data/blog/*.md");
 ---
 
 <Layout>
-  <main class="container px-2">
-    <h2 class="text-xl">Blog</h2>
+  <main class="container px-2 py-2">
+    <h2 class="text-2xl">Blog</h2>
     {
       posts.map((post) => {
         return <div>{post.frontmatter.slug}</div>;
