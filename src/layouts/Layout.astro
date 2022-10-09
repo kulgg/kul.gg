@@ -1,4 +1,5 @@
 ---
+import BaseLayout from "./BaseLayout.astro";
 import DynamicHeader from "./DynamicHeader";
 import Header from "./Header";
 
@@ -10,18 +11,7 @@ export interface Props {
 const { title, dynamicHeader } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="Personal developer site of kulgg" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{title ?? "kul.gg"}</title>
-  </head>
-  <body class="bg-slate-800 text-gray-100">
-    {dynamicHeader ? <DynamicHeader client:idle /> : <Header />}
-    <slot />
-  </body>
-</html>
+<BaseLayout title={title}>
+  {dynamicHeader ? <DynamicHeader client:idle /> : <Header />}
+  <slot />
+</BaseLayout>
