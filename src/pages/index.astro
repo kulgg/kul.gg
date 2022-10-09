@@ -5,20 +5,30 @@ import FarewellMessage from "../components/FarewellMessage";
 import Projects from "../components/Projects.astro";
 import Education from "../components/Education";
 import Technologies from "../components/Technologies";
+import LatestPosts from "../components/blog/LatestPosts.astro";
+import { sortPostsByPublishDate } from "../utils/blog";
+import type { Frontmatter } from "../types/frontmatter";
+
+const posts = await Astro.glob<Frontmatter>("../../data/blog/*.md");
+sortPostsByPublishDate(posts);
 ---
 
 <Layout dynamicHeader={true}>
   <LandingScreen />
   <main class="px-2 container" id="about">
     <div class="my-24"></div>
-    <h2 class="text-2xl mb-6">Projects</h2>
+    <h2 class="text-3xl mb-6">Projects</h2>
     <Projects />
     <hr class="my-10 sm:my-16 h-px border-0 bg-gray-700" />
-    <h2 class="text-2xl">Education</h2>
+    <h2 class="text-3xl">Education</h2>
     <Education client:visible />
     <hr class="my-10 sm:my-16 h-px border-0 bg-gray-700" />
-    <h2 class="text-2xl">Technologies</h2>
+    <h2 class="text-3xl">Technologies</h2>
     <Technologies client:visible />
+    <hr class="my-10 sm:my-16 h-px border-0 bg-gray-700" />
+    <h2 class="text-3xl">Latest posts</h2>
+    <div class="mb-8"></div>
+    <LatestPosts posts={posts} />
     <hr class="my-10 sm:my-16 h-px border-0 bg-gray-700" />
     <FarewellMessage client:visible />
   </main>
