@@ -42,6 +42,19 @@ const projects: Project[] = [
     githubLink: "https://github.com/kulgg/kul.gg",
     liveLink: "https://kul.gg",
   },
+  {
+    title: "NextChess",
+    description: "Online multiplayer chess",
+    technologies: [
+      { name: "TypeScript", type: "language" },
+      { name: "Next.js", type: "framework" },
+      { name: "Tailwind CSS", type: "framework" },
+      { name: "Vercel", type: "tool" },
+      { name: "Pusher", type: "tool" },
+    ],
+    githubLink: "https://github.com/kulgg/nextchess",
+    liveLink: "https://chess.kul.gg",
+  },
 ];
 
 export { projects };
