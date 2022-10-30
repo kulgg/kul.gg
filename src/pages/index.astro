@@ -22,10 +22,10 @@ posts = posts.slice(0, 5);
     <Projects />
     <hr class="my-10 sm:my-16 h-px border-0 bg-gray-700" />
     <h2 class="text-3xl">Education</h2>
-    <Education client:visible />
+    <Education client:idle />
     <hr class="my-10 sm:my-16 h-px border-0 bg-gray-700" />
     <h2 class="text-3xl">Technologies</h2>
-    <Technologies client:visible />
+    <Technologies client:idle />
     <hr class="my-10 sm:my-16 h-px border-0 bg-gray-700" />
     <h2 class="text-3xl">Latest posts</h2>
     <div class="mb-6"></div>
@@ -33,7 +33,7 @@ posts = posts.slice(0, 5);
       <LatestPosts posts={posts} />
     </div>
     <hr class="my-10 sm:my-16 h-px border-0 bg-gray-700" />
-    <FarewellMessage client:visible />
+    <FarewellMessage client:idle />
   </main>
 </Layout>
 <style is:global>
