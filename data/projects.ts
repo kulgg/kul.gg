@@ -66,6 +66,18 @@ const projects: Project[] = [
     githubLink: "https://github.com/kulgg/nextchess",
     liveLink: "https://chess.kul.gg",
   },
+  {
+    title: "MaCPep ScyllaDB",
+    description:
+      "Digests proteins stored in FASTA / Uniprot textfiles and inserts the resulting peptides and proteins into a ScyllaDB NoSQL cluster",
+    technologies: [
+      { name: "Python", type: "language" },
+      { name: "Fire", type: "framework" },
+      { name: "Poetry", type: "tool" },
+      { name: "ScyllaDB", type: "tool" },
+    ],
+    githubLink: "https://github.com/kulgg/macpep-scylladb",
+  },
 ];
 
 export { projects };
