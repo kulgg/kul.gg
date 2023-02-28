@@ -8,12 +8,23 @@ export type Project = {
   description: string;
   technologies: Technology[];
   githubLink: string;
-  liveLink: string;
+  liveLink?: string;
 };
 
 // ToDo: make technology type enum and refactor technologybadge component
 
 const projects: Project[] = [
+  {
+    title: "TweetFisher",
+    description:
+      "Easily retrieve deleted tweets that have been archived by the wayback machine",
+    technologies: [
+      { name: "TypeScript", type: "language" },
+      { name: "Next.js", type: "framework" },
+      { name: "Tailwind CSS", type: "framework" },
+    ],
+    githubLink: "https://github.com/kulgg/tweetfisher",
+  },
   {
     title: "worktime",
     description: "A work time tracker built using all modules of the T3 Stack",

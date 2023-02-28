@@ -7,7 +7,11 @@ export default function ProjectEntry({ project }: { project: Project }) {
       <div>
         <div className="flex flex-row items-center justify-between">
           <h3 className="mb-2 text-lg font-semibold tracking-tight text-white hover:underline">
-            <a href={project.liveLink}>{project.title}</a>
+            {project.liveLink ? (
+              <a href={project.liveLink}>{project.title}</a>
+            ) : (
+              <span>{project.title}</span>
+            )}
           </h3>
           <div className="flex items-center gap-1">
             <a href={project.githubLink} aria-label="Github">
